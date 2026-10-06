@@ -1,11 +1,11 @@
 using Microsoft.EntityFrameworkCore;
 using NodaTime;
-using CircuitYard.Api.Data;
-using CircuitYard.Api.Extensions;
-using CircuitYard.Api.Models;
-using CircuitYard.Api.Services;
+using CircuitYard.Server.Data;
+using CircuitYard.Server.Extensions;
+using CircuitYard.Server.Models;
+using CircuitYard.Server.Services;
 
-namespace CircuitYard.Api.Endpoints.Handlers;
+namespace CircuitYard.Server.Endpoints.Handlers;
 
 public class RefreshTokenHandler
 {

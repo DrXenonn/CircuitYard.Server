@@ -1,4 +1,4 @@
-namespace CircuitYard.Api.Constants;
+namespace CircuitYard.Server.Constants;
 
 public static class Roles
 {

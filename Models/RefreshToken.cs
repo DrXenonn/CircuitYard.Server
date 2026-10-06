@@ -1,7 +1,7 @@
 using NodaTime;
-using CircuitYard.Api.Data;
+using CircuitYard.Server.Data;
 
-namespace CircuitYard.Api.Models;
+namespace CircuitYard.Server.Models;
 
 public class RefreshToken
 {

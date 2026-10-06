@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 
-namespace CircuitYard.Api.Data;
+namespace CircuitYard.Server.Data;
 
 public sealed class ApplicationUser : IdentityUser
 {

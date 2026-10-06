@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Scalar.AspNetCore;
 using Serilog;
-using CircuitYard.Api.Constants;
-using CircuitYard.Api.Data;
-using CircuitYard.Api.Endpoints;
-using CircuitYard.Api.Jobs;
-using CircuitYard.Api.Services;
+using CircuitYard.Server.Constants;
+using CircuitYard.Server.Data;
+using CircuitYard.Server.Endpoints;
+using CircuitYard.Server.Jobs;
+using CircuitYard.Server.Services;
 using FluentValidation;
 using System.Diagnostics;
 
@@ -36,6 +36,8 @@ try
                 .AllowAnyMethod()
                 .AllowAnyHeader()
                 .AllowCredentials()));
+
+    builder.Services.AddSignalR();
 
     builder.Services.AddRateLimiter(options =>
         {

@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using NodaTime;
-using CircuitYard.Api.Data;
+using CircuitYard.Server.Data;
 
-namespace CircuitYard.Api.Jobs;
+namespace CircuitYard.Server.Jobs;
 
 public class ExpiredTokenCleanupJob : BackgroundService
 {

@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using CircuitYard.Api.Models;
+using CircuitYard.Server.Models;
 
-namespace CircuitYard.Api.Data;
+namespace CircuitYard.Server.Data;
 
 public class AppDbContext(DbContextOptions<AppDbContext> options)
     : IdentityDbContext<ApplicationUser>(options)
@@ -14,10 +14,10 @@ public class AppDbContext(DbContextOptions<AppDbContext> options)
         // builder.Entity<ApplicationUser>(entity =>
         //         entity.Property(e => e.EnableNotifications).HasDefaultValue(true));
         builder.HasDefaultSchema("identity");
-        builder.Entity<TestModel>().ToTable("TestModels", "public");
         builder.Entity<RefreshToken>().ToTable("RefreshTokens", "identity");
     }
 
-    public DbSet<TestModel> TestModels { get; set; }
     public DbSet<RefreshToken> RefreshTokens { get; set; }
+    public DbSet<Chunk> Chunks { get; set; }
+    public DbSet<Cell> Cells { get; set; }
 }

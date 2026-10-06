@@ -1,4 +1,4 @@
-namespace CircuitYard.Api.Extensions;
+namespace CircuitYard.Server.Extensions;
 
 public static class HttpContextExtensions
 {

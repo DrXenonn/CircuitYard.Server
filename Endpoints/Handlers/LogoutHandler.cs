@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
-using CircuitYard.Api.Data;
-using CircuitYard.Api.Extensions;
+using CircuitYard.Server.Data;
+using CircuitYard.Server.Extensions;
 
-namespace CircuitYard.Api.Endpoints.Handlers;
+namespace CircuitYard.Server.Endpoints.Handlers;
 
 public class LogoutHandler
 {

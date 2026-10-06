@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using CircuitYard.Api.Models;
+using CircuitYard.Server.Models;
 
-namespace CircuitYard.Api.Data.Configuration;
+namespace CircuitYard.Server.Data.Configuration;
 
 public sealed class RefreshTokenConfiguration : IEntityTypeConfiguration<RefreshToken>
 {

@@ -3,9 +3,9 @@ using System.Security.Cryptography;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.JsonWebTokens;
 using Microsoft.IdentityModel.Tokens;
-using CircuitYard.Api.Data;
+using CircuitYard.Server.Data;
 
-namespace CircuitYard.Api.Services;
+namespace CircuitYard.Server.Services;
 
 public class TokenProvider
 {

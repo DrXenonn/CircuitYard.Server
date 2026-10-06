@@ -1,7 +1,7 @@
 using System.Security.Claims;
-using CircuitYard.Api.Endpoints.Handlers;
+using CircuitYard.Server.Endpoints.Handlers;
 
-namespace CircuitYard.Api.Endpoints;
+namespace CircuitYard.Server.Endpoints;
 
 public static class StarterEndpoints
 {

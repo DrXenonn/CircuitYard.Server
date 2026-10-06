@@ -1,4 +1,4 @@
-# Contributing to CircuitYard.Api
+# Contributing to CircuitYard.Server
 
 This is a **personal-use template project** — these are internal guidelines, not an open-source policy.
 
