@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using CircuitYard.Server.Models;
 
-namespace CircuitYard.Server.Data.Configuration;
+namespace CircuitYard.Server.Data.Configurations;
 
 public sealed class RefreshTokenConfiguration : IEntityTypeConfiguration<RefreshToken>
 {
