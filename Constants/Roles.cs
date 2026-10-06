@@ -1,4 +1,4 @@
-namespace StarterKit.Api.Constants;
+namespace CircuitYard.Api.Constants;
 
 public static class Roles
 {

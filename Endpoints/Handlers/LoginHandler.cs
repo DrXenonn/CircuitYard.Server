@@ -1,12 +1,12 @@
 using Microsoft.AspNetCore.Identity;
 using NodaTime;
-using StarterKit.Api.Data;
-using StarterKit.Api.Dtos;
-using StarterKit.Api.Extensions;
-using StarterKit.Api.Models;
-using StarterKit.Api.Services;
+using CircuitYard.Api.Data;
+using CircuitYard.Api.Dtos;
+using CircuitYard.Api.Extensions;
+using CircuitYard.Api.Models;
+using CircuitYard.Api.Services;
 
-namespace StarterKit.Api.Endpoints.Handlers;
+namespace CircuitYard.Api.Endpoints.Handlers;
 
 public class LoginHandler
 {

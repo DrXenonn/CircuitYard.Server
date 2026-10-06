@@ -1,4 +1,4 @@
-namespace StarterKit.Api.Models;
+namespace CircuitYard.Api.Models;
 
 public class TestModel
 {

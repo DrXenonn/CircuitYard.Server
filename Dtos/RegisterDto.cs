@@ -1,3 +1,3 @@
-namespace StarterKit.Api.Dtos;
+namespace CircuitYard.Api.Dtos;
 
 public record RegisterDto(string Email, string Password, string ConfirmPassword) { }

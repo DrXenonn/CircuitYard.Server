@@ -1,10 +1,10 @@
 using FluentValidation;
 using Microsoft.AspNetCore.Identity;
-using StarterKit.Api.Constants;
-using StarterKit.Api.Data;
-using StarterKit.Api.Dtos;
+using CircuitYard.Api.Constants;
+using CircuitYard.Api.Data;
+using CircuitYard.Api.Dtos;
 
-namespace StarterKit.Api.Endpoints.Handlers;
+namespace CircuitYard.Api.Endpoints.Handlers;
 
 public class RegisterHandler
 {

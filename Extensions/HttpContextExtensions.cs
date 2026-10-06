@@ -1,4 +1,4 @@
-namespace StarterKit.Api.Extensions;
+namespace CircuitYard.Api.Extensions;
 
 public static class HttpContextExtensions
 {

@@ -1,7 +1,7 @@
 using FluentValidation;
-using StarterKit.Api.Dtos;
+using CircuitYard.Api.Dtos;
 
-namespace StarterKit.Api.Validators;
+namespace CircuitYard.Api.Validators;
 
 public class RegisterValidator : AbstractValidator<RegisterDto>
 {

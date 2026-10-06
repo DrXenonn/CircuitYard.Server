@@ -4,7 +4,7 @@ using NodaTime;
 
 #nullable disable
 
-namespace StarterKit.Api.Migrations
+namespace CircuitYard.Api.Migrations
 {
     /// <inheritdoc />
     public partial class CreateRefreshTokens : Migration

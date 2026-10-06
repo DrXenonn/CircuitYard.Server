@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using StarterKit.Api.Models;
+using CircuitYard.Api.Models;
 
-namespace StarterKit.Api.Data;
+namespace CircuitYard.Api.Data;
 
 public class AppDbContext(DbContextOptions<AppDbContext> options)
     : IdentityDbContext<ApplicationUser>(options)

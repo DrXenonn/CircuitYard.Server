@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
-using StarterKit.Api.Data;
-using StarterKit.Api.Extensions;
+using CircuitYard.Api.Data;
+using CircuitYard.Api.Extensions;
 
-namespace StarterKit.Api.Endpoints.Handlers;
+namespace CircuitYard.Api.Endpoints.Handlers;
 
 public class LogoutHandler
 {
