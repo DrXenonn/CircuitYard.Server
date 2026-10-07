@@ -1,8 +1,7 @@
 namespace CircuitYard.Server.Models;
 
-public class Cell
+public class PlacedObject
 {
     public int X { get; set; }
     public int Y { get; set; }
-    public bool IsPlaced { get; set; }
 }

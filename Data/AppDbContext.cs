@@ -22,6 +22,5 @@ public class AppDbContext(DbContextOptions<AppDbContext> options)
     }
 
     public DbSet<RefreshToken> RefreshTokens { get; set; }
-    public DbSet<Chunk> Chunks { get; set; }
-    public DbSet<Cell> Cells { get; set; }
+    public DbSet<PlacedObject> PlacedObjects { get; set; }
 }
