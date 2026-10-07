@@ -3,6 +3,7 @@ using CircuitYard.Server.Data;
 using CircuitYard.Server.Models;
 using CircuitYard.Server.Dtos;
 using Microsoft.EntityFrameworkCore;
+using CircuitYard.Server.Constants;
 
 namespace CircuitYard.Server.Hubs;
 
@@ -26,11 +27,15 @@ public class GameHub : Hub
     //Refactor the whole hub.
     public async Task<List<PlacedObject>> LoadNearbyObjects(int chunkX, int chunkY)
     {
-        var minX = Math.Max(0, (chunkX - 1) * 16);
-        var maxX = Math.Min(127, (chunkX + 2) * 16 - 1);
+        var maxCellCoordinate = WorldConstants.WorldSize - 1;
+        var renderDistance = WorldConstants.RenderDistance;
+        var chunkSize = WorldConstants.ChunkSize;
 
-        var minY = Math.Max(0, (chunkY - 1) * 16);
-        var maxY = Math.Min(127, (chunkY + 2) * 16 - 1);
+        var minX = Math.Max(0, (chunkX - renderDistance) * chunkSize);
+        var maxX = Math.Min(maxCellCoordinate, (chunkX + renderDistance + 1) * chunkSize) - 1;
+
+        var minY = Math.Max(0, (chunkY - renderDistance) * chunkSize);
+        var maxY = Math.Min(maxCellCoordinate, (chunkY + renderDistance + 1) * chunkSize) - 1;
 
         return await _dbContext.PlacedObjects
             .Where(p =>
