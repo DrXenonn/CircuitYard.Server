@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.SignalR;
 using CircuitYard.Server.Data;
 using CircuitYard.Server.Models;
+using CircuitYard.Server.Dtos;
+using Microsoft.EntityFrameworkCore;
 
 namespace CircuitYard.Server.Hubs;
 
@@ -28,5 +30,27 @@ public class GameHub : Hub
         }
 
         await _dbContext.SaveChangesAsync();
+    }
+
+    //TODO: Use constants for chunk and nearby chunks to load(render distance) and world side
+    //Refactor the whole hub.
+    public async Task<List<PlacedObjectDto>> LoadNearbyObjects(int chunkX, int chunkY)
+    {
+        var minX = Math.Max(0, chunkX - 1);
+        var maxX = Math.Min(7, chunkX + 1);
+        var minY = Math.Max(0, chunkY - 1);
+        var maxY = Math.Min(7, chunkY + 1);
+
+        var chunks = await _dbContext.Chunks
+            .AsNoTracking()
+            .Include(c => c.Cells)
+            .Where(c => c.X >= minX && c.X <= maxX &&
+                        c.Y >= minY && c.Y <= maxY)
+            .ToListAsync();
+
+        return chunks
+            .SelectMany(chunk => chunk.Cells)
+            .Select(cell => new PlacedObjectDto(cell.X, cell.Y, true))
+            .ToList();
     }
 }
